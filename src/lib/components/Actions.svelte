@@ -177,9 +177,8 @@
     isNetlify = true;
   }
   stateStore.subscribe(({ code, serialized }) => {
-    iUrl = `${rendererUrl}/img/${serialized}?type=png`;
-    svgUrl = `${rendererUrl}/svg/${serialized}`;
-    krokiUrl = `${krokiRendererUrl}/mermaid/svg/${pakoSerde.serialize(code)}`;
+    iUrl = `${rendererUrl}/view#${serialized}?type=png`;
+    svgUrl = `${rendererUrl}/view#${serialized}`;
     mdCode = `[![](${iUrl})](${window.location.protocol}//${window.location.host}${window.location.pathname}#${serialized})`;
   });
 </script>
@@ -207,12 +206,6 @@
         <i class="fas fa-external-link-alt mr-2" /> SVG
       </button>
     </a>
-    <a target="_blank" rel="noreferrer" class="flex-grow" href={krokiUrl}>
-      <button class="action-btn w-full">
-        <i class="fas fa-external-link-alt mr-2" /> Kroki
-      </button>
-    </a>
-
     <div class="flex gap-2 items-center">
       PNG size
       <label for="autosize">

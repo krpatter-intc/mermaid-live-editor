@@ -1,3 +1,5 @@
+docs
+deploy/docs
 node_modules/
 coverage/
 .cache/

@@ -1,0 +1,10 @@
+applications:
+- name: mermaid-live
+  memory: 256MB
+  disk_quota: 512MB
+  instances: 1
+  buildpacks:
+  - staticfile_buildpack
+  hostname: mermaid-live
+  env:
+    MERMAID_RENDERER_URL: https://mermaid-live.apps1-fm-htz.icloud.intel.com/
